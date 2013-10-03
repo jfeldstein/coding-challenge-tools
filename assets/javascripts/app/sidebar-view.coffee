@@ -7,8 +7,14 @@ define ['jquery', 'underscore', 'templates'], ($, _, templates) ->
 
       $(renderInto).html html
 
-      $('#gotoaddress').on 'click', ->
+      $('#gotoaddress').on 'click', =>
         address = $('#address').val()
-        $(this).trigger('panToAddress', address)
+        $('body').trigger('panToAddress', address)
+
+        @showAlertSignup()
+
+    # Could be more complex than .show(), and didn't want to pullute the click handler
+    showAlertSignup: ->
+      $('.alert-signup').show()
 
   SidebarView
