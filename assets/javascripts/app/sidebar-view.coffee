@@ -7,11 +7,15 @@ define ['jquery', 'underscore', 'templates'], ($, _, templates) ->
 
       $(renderInto).html html
 
-      $('#gotoaddress').on 'click', =>
-        address = $('#address').val()
-        $('body').trigger('panToAddress', address)
+      $('#gotoaddress').on 'click', @goToAddress
+      $('#address').on 'keypress', (e) =>
+        @goToAddress() if e.which==13
 
-        @showAlertSignup()
+    goToAddress: =>
+      address = $('#address').val()
+      $('body').trigger('panToAddress', address)
+
+      @showAlertSignup()
 
     # Could be more complex than .show(), and didn't want to pullute the click handler
     showAlertSignup: ->
