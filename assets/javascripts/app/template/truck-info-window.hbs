@@ -1,1 +1,4 @@
-truck-info-window.hbs
+<h2>{{name}}</h2>
+<p>
+  We sell {{#colon-del-to-list fooditem}}{{/colon-del-to-list}} near {{#map-link-helper address}}{{/map-link-helper}}.
+</p>
