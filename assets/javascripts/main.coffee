@@ -6,7 +6,11 @@ require
     async: 'vendor/requirejs-plugins/async',
     bootstrap: 'vendor/bootstrap/bootstrap',
     underscore: 'vendor/underscore-amd/underscore'
-  , ['app/map-view']
-  , (MapView) ->
-    view = new MapView()
-    view.render('body')
+  , ['app/map-view', 'app/sidebar-view']
+  , (MapView, SidebarView) ->
+
+    map = new MapView()
+    map.render('body')
+
+    side = new SidebarView()
+    side.render('.sidebar')

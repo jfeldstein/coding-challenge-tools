@@ -21,9 +21,9 @@ I chose to implement this project with:
 ## Plan
   √ Render a map
   √ Plot data points on map
-  - Change pin to look like a truck
-  - Center map on a given address
-  - Allow user to enter their own address
+  √ Change pin to look like a truck
+  √ Center map on a given address
+  √ Allow user to enter their own address
   - Support for geolocation (if browser supports)
   - Sign up for "new truck" notifications (gather emails)
   - Invite someone for lunch (virality)
