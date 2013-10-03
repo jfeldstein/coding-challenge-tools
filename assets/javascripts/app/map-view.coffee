@@ -17,6 +17,7 @@ define ['jquery', 'underscore', 'templates', 'gmaps'], ($, _, templates, GoogleM
           marker = new google.maps.Marker
             position: new google.maps.LatLng(truck.lat, truck.long)
             map: map
+            icon: '/img/foodtruck.png'
 
           google.maps.event.addListener marker, 'click', ->
             lastWindow.close() if lastWindow
