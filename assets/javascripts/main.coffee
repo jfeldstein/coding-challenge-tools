@@ -3,8 +3,9 @@ require
   paths:
     jquery: 'vendor/jquery/jquery'
     gmaps: 'vendor/requirejs-google-maps/GoogleMap'
-    async: 'vendor/requirejs-plugins/async'
-  , ['app/example-view']
-  , (ExampleView) ->
-    view = new ExampleView()
+    async: 'vendor/requirejs-plugins/async',
+    bootstrap: 'vendor/bootstrap/bootstrap'
+  , ['app/map-view']
+  , (MapView) ->
+    view = new MapView()
     view.render('body')
