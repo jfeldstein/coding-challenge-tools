@@ -17,3 +17,13 @@ I chose to implement this project with:
 
 * The app is going to be a publically accessible resource
 * Someone else is going to make a better API for returning the right data. I'm just dumping a static JSON file for now.
+
+## Plan
+  - Render a map
+  - Plot data points on map
+  - Change pin to look like a truck
+  - Center map on a given address
+  - Allow user to enter their own address
+  - Support for geolocation (if browser supports)
+  - Sign up for "new truck" notifications (gather emails)
+  - Invite someone for lunch (virality)
