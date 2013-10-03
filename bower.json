@@ -4,6 +4,7 @@
   "dependencies": {
     "jquery": "2.0.3",
     "requirejs": "2.1.8",
-    "requirejs-google-maps": "*"
+    "requirejs-google-maps": "*",
+    "bootstrap": "*"
   }
 }
