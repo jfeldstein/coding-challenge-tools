@@ -20,7 +20,7 @@ exports.config = {
   'mimosa-' that preceeds all Mimosa module names is assumed, however you can use it if you
   want. If a module is listed here that Mimosa is unaware of, Mimosa will attempt to install it.
   ###
-  # modules: ['lint', 'server', 'require', 'minify', 'live-reload', 'bower']
+  modules: ['lint', 'server', 'require', 'minify', 'live-reload', 'bower', 'web-package']
 
   # watch:
     # sourceDir: "assets"                # directory location of web assets, can be relative to
