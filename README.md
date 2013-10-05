@@ -41,4 +41,6 @@ The app is live at http://uberfoodtrucks.herokuapp.com/
 
 A repo is on github at https://github.com/jfeldstein/coding-challenge-tools
 
+There's a lot of code, most of which is Mimosa boilerplate. My code lives in /assets/javascripts/ and /routes/. (I hope that helps make reviewing my work easier on whoever's looking at this)
+
 Thanks for taking the time to read my code. Questions? Email jfeldstein@gmail.com
