@@ -1,12 +1,19 @@
-define ['jquery', 'underscore', 'templates', 'gmaps'], ($, _, templates, GoogleMap) ->
+define ['jquery', 'underscore', 'templates'], ($, _, templates) ->
+  
+  # Had trouble getting the app to compile with the remote gmaps api javascripts
+  # So they're loaded directly by the HTML. 
+  #
+  # Normally, I'd file an issue with the mimosa maintainers, 
+  # as I think it's an issue with their mimosa-web-projects bundle
+  GoogleMap = google.maps
 
   class MapView
 
     render: () ->
-      geoCoder = new google.maps.Geocoder()
+      geoCoder = new GoogleMap.Geocoder()
       mapEl = document.getElementById 'map'
-      map = new GoogleMap mapEl,
-        center: new google.maps.LatLng('37.7733', '-122.4337')
+      map = new GoogleMap.Map mapEl,
+        center: new GoogleMap.LatLng('37.7733', '-122.4337')
         zoom: 14
       lastWindow = false
 
@@ -21,15 +28,15 @@ define ['jquery', 'underscore', 'templates', 'gmaps'], ($, _, templates, GoogleM
 
       $.get '/trucks/', (data) ->
         _(data).each (truck) ->
-          info = new google.maps.InfoWindow
+          info = new GoogleMap.InfoWindow
             content: templates['truck-info-window'](truck)
 
-          marker = new google.maps.Marker
-            position: new google.maps.LatLng(truck.lat, truck.long)
+          marker = new GoogleMap.Marker
+            position: new GoogleMap.LatLng(truck.lat, truck.long)
             map: map
             icon: '/img/foodtruck.png'
 
-          google.maps.event.addListener marker, 'click', ->
+          GoogleMap.event.addListener marker, 'click', ->
             lastWindow.close() if lastWindow
             info.open(map,marker)
             lastWindow = info

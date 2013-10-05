@@ -4,6 +4,13 @@ html
     title Mimosa
     link(rel='stylesheet', href='/stylesheets/style.css' + cachebust)
 
+    // Mimosa is new to me, and I had issues getting some assets to compile into a valid heroku slug. 
+    // In particular, Bootstrap and Google Maps are included directly in the HTML, rather than through 
+    // the bower/requirejs stack. 
+    link(rel='stylesheet', href='//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css')
+    script(src='//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js')
+    script(src='http://maps.googleapis.com/maps/api/js?v=3&sensor=true')
+
     if reload
       script(src='/socket.io/socket.io.js')
       script(src='/javascripts/reload-client.js')
