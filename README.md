@@ -31,7 +31,9 @@ I chose to implement this project with:
 
 ## Hiccups
 
-The only issue I ran into was at the very end, when pushing to Heroku. Had to Procfile etc.
+The only issue I ran into was at the very end, when pushing to Heroku. Had to Procfile etc. 
+
+Also, gmaps and bootstrap didn't like being compiled through bower/requirejs. I didn't feel like debugging the issue with all new tools, so I just included them statically in the HTML for the purpose of this demo. 
 
 # Results
 
